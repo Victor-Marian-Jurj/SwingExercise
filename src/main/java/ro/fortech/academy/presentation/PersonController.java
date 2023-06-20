@@ -1,13 +1,12 @@
 package ro.fortech.academy.presentation;
 
 import ro.fortech.academy.business.PersonService;
+import ro.fortech.academy.presentation.PersonModel;
+import ro.fortech.academy.presentation.PersonView;
 
 public class PersonController {
-
     private PersonView view;
-
     private PersonModel model;
-
     private PersonService service;
 
     public PersonController(PersonView view, PersonModel model, PersonService service) {
@@ -17,8 +16,17 @@ public class PersonController {
     }
 
     public void buttonRefreshPressed() {
-        model.setPersonList(service.getAllPersons());
-        view.refreshTable(model.getPersonList());
+        loadData();
+        updateUIFromData();
     }
 
+    public void loadData() {
+        model.setPersonList(service.getAllPersons());
+    }
+
+    public void updateUIFromData() {
+        view.refreshTable(model.getPersonList());
+    }
 }
+
+
