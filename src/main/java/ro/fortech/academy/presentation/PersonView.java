@@ -102,9 +102,5 @@ public class PersonView extends JFrame {
         }
     }
 
-    public interface PersonController {
-        void buttonRefreshPressed();
-        void loadData();
-        void updateUIFromData();
-    }
+
 }

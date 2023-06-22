@@ -1,8 +1,6 @@
 package ro.fortech.academy.presentation;
 
 import ro.fortech.academy.business.PersonService;
-import ro.fortech.academy.presentation.PersonModel;
-import ro.fortech.academy.presentation.PersonView;
 
 public class PersonController {
     private PersonView view;
